@@ -19,7 +19,7 @@ TOKEN = '8001f95888d966516dd1cd17981a8277d19f9f8d127209cf968be11ec48da892db2a7ab
 def friends_getmutual():
     print('Enter user_id')
     source_uid = input()
-    print('Enter users_id to find mutual friends with them')
+    print('Enter users_id via comma to find mutual friends with them, ex. 234,2342,435')
     target_uids = input()
     response = requests.get(
         'https://api.vk.com/method/friends.getMutual',
