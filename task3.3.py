@@ -26,8 +26,6 @@ def friends_getmutual():
         params=dict(
             v='5.74',
             access_token=TOKEN,
-            # source_uid=120008943,
-            # target_uids=2761831
             source_uid=source_uid,
             target_uids=target_uids
         )
@@ -42,7 +40,6 @@ def mutual_friends_pages_list(user_id_list):
         params=dict(
             v='5.74',
             access_token=TOKEN,
-            # user_id=,
             user_ids=user_id_list,
         )
     )
@@ -59,3 +56,4 @@ def data_prep():
 
 for u_id in mutual_friends_pages_list(data_prep())['response']:
     print(u_id['id'], 'https://vk.com/id'+str(u_id['id']))
+
